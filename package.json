@@ -4,8 +4,12 @@
     "description": "",
     "main": "lib/index.js",
     "scripts": {
-        "build": "tsc -p .",
+        "build": "tsc",
         "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mfoncho/colab-types"
     },
     "author": "Mfoncho Che",
     "license": "ISC"
