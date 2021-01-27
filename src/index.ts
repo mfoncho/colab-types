@@ -1,4 +1,3 @@
-
 export interface IColor {
     "50": string;
     "100": string;
@@ -67,9 +66,8 @@ export interface Catchable<T = any> {
 
 export interface Promiseable<T = any, E = any>
     extends Thenable<T>,
-    Finalizable<T>,
-    Catchable<E> {
-}
+        Finalizable<T>,
+        Catchable<E> {}
 
 export interface RouterParams {
     channel_id?: string;
@@ -86,6 +84,14 @@ export interface RouteLocation {
 
 export interface Route extends RouteLocation {
     params: RouterParams;
+}
+
+export interface Page<T> {
+    data: T[];
+    page_size: number;
+    page_number: number;
+    total_count: number;
+    total_pages: number;
 }
 
 export type ColumnType = "stack" | "queue";
@@ -129,4 +135,3 @@ export interface BelongsToChannel {
 export interface BelongsToWorkspace {
     workspace_id: Id;
 }
-
