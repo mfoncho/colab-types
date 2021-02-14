@@ -56,6 +56,14 @@ export interface Thenable<T = any> {
     ): Promise<S | E>;
 }
 
+export type PartialTurtle<T> = {
+    [P in keyof T]?:
+      T[P] extends (infer U)[] ? PartialTurtle<U>[] :
+      T[P] extends object ? PartialTurtle<T[P]> :
+      T[P];
+}
+
+
 export interface Finalizable<T = any> {
     finally<F = never>(onFullfill: () => F): Promise<T | F>;
 }
