@@ -104,7 +104,7 @@ export interface Page<T> {
 
 export type ColumnType = "stack" | "queue";
 
-export type ThreadType = "main" | "reply" | "card";
+export type ThreadType = "topic" | "reply" | "card" | "email" | "comment";
 
 export type  Access = "public" | "private" | "direct";
 
@@ -140,6 +140,10 @@ export interface BelongsToThread {
 
 export interface BelongsToSpace {
     space_id: Id;
+}
+
+export interface BelongsToBoard{
+    board_id: Id
 }
 
 export interface BelongsToWorkspace {
