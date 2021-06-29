@@ -106,7 +106,9 @@ export type ColumnType = "stack" | "queue";
 
 export type ThreadType = "main" | "reply" | "card";
 
-export type ChannelType = "public" | "private" | "direct";
+export type  Access = "public" | "private" | "direct";
+
+export type SpaceType = "board" | "discuss";
 
 export type Id = string;
 
@@ -136,8 +138,8 @@ export interface BelongsToThread {
     thread_id: Id;
 }
 
-export interface BelongsToChannel {
-    channel_id: Id;
+export interface BelongsToSpace {
+    space_id: Id;
 }
 
 export interface BelongsToWorkspace {
